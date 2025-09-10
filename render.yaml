@@ -1,9 +1,9 @@
 services:
   - type: web
     name: mmsbee-app
-    env: static
+    env: node
     buildCommand: npm ci && npm run build
-    staticPublishPath: ./dist
+    startCommand: npx serve -s dist -l 10000
     envVars:
       - key: NODE_VERSION
         value: "18"
