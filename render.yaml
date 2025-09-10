@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mmsbee-app
+    env: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: "18"
+      - key: VITE_SUPABASE_URL
+        value: "https://rwfikcpsnpacbtaotaht.supabase.co"
+      - key: VITE_SUPABASE_ANON_KEY
+        value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ3ZmlrY3BzbnBhY2J0YW90YWh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc0OTcyNTMsImV4cCI6MjA3MzA3MzI1M30.LhkedU1lrK_2OIpv1XkuG-iduUjEuCXqV2qZhQ96-YA"
